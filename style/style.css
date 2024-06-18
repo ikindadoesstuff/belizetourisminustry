@@ -1,0 +1,203 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+NZ:wght@100..400&display=swap');
+
+html, body {
+    margin: 0;
+    height: 100%;
+    width: 100%;
+
+    font-family: "Playwrite NZ", cursive;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color:rgb(255, 255, 255)
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+    overflow: hidden;
+}
+
+.backdrop {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    animation: cycle-backgrounds 30s ease-in-out infinite;
+    /* Vendor prefixes */
+    -webkit-animation: cycle-backgrounds 30s ease-in-out infinite;
+}
+
+@keyframes cycle-backgrounds {
+    0% {
+        background-image: url('../assets/img/1.png');
+    }
+    25%, 35% {
+        background-image: url('../assets/img/2.png');
+    }
+    50%, 60% {
+        background-image: url('../assets/img/3.png');
+    }
+    85%, 100% {
+        background-image: url('../assets/img/1.png');
+    }
+}
+
+@-webkit-keyframes cycle-backgrounds {
+    0% {
+        background-image: url('../assets/img/1.png');
+    }
+    25%, 35% {
+        background-image: url('../assets/img/2.png');
+    }
+    50%, 60% {
+        background-image: url('../assets/img/3.png');
+    }
+    85%, 100% {
+        background-image: url('../assets/img/1.png');
+    }
+}
+
+.map_backdrop {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/img/map.jpg");
+    position: relative;
+}
+.history_backdrop {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/img/history/The-Great-House-History.jpg");
+    position: relative;
+}
+.gdp_backdrop {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/img/gdp/mountains.jpg");
+    position: relative;
+}
+.demography_backdrop {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("../assets/img/demography/demography.jpg");
+    position: relative;
+}
+
+button {
+    all: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    transition: all 2s;
+}
+
+#welcome {
+    font-size: 2.9rem;
+}
+
+#welcome:hover {
+    font-size: 3rem;
+
+    transition: all 2s;
+}
+
+#welcome:active {
+    font-size: 3.08rem;
+    font-weight: bold;
+    
+    transition: all 0.5s;
+}
+
+.table {
+    display: flex;
+    flex-direction: row;
+    gap: 10vh;
+    text-wrap: pretty;
+    text-align: center;
+    flex-wrap: wrap;
+
+}
+
+.selection{
+    height: 25vh;
+    width:25vh;
+    border-radius: 50%;
+    background-color: rgb(0, 0, 0);
+    display: inline-block;
+    transition: all 1s;
+}
+
+.selection:hover{
+    font-weight: bolder;
+}
+
+.selection:active{
+    transform: rotate(6deg);
+    transition: all 0.5s;
+}
+
+/*history{
+    background-image: url(../assets/img/history/The-Great-House-History.jpg);
+    background-size: cover;
+    background-clip: padding-box;
+}
+#gdp{
+
+}
+#demography{
+
+}
+#challengessuccesses{
+
+}*/
+
+.menu {
+    background-color: black;
+    border-color: rgb(255, 255, 255);
+    width: 70vw;
+    height: 50vh;
+    top: 20px;
+    display: inline-block;
+    padding: 25px;
+    transition: all 1s;
+    text-align: left;
+    overflow-y: scroll;
+    
+    scrollbar-width: thin;
+    scrollbar-color: white black;
+
+    border-radius: 10px;
+    border: 2px;
+}
+
+em {
+    font-weight: bold;
+    font-size: 120%;
+}
+
+.backbutton{
+    position: sticky; 
+    top: 20px;
+    width: 20vh;
+    height: 20vh;
+}
+
+a::after {
+    content: attr(href);
+}
